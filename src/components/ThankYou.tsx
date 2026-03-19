@@ -8,7 +8,7 @@ interface ThankYouProps {
 }
 
 export const ThankYou: React.FC<ThankYouProps> = ({ onBack }) => {
-  const whatsappUrl = "https://wa.me/5587991592601";
+  const whatsappUrl = "https://wa.me/558199244947";
 
   return (
     <div className="min-h-screen bg-neutral-900 flex flex-col items-center justify-center p-6 relative overflow-hidden">

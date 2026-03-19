@@ -12,7 +12,7 @@ interface CTAProps {
 }
 
 export const CTA: React.FC<CTAProps> = ({ onCtaClick }) => {
-  const whatsappUrl = "https://wa.me/5587991592601";
+  const whatsappUrl = "https://wa.me/558199244947";
   const currentYear = new Date().getFullYear();
 
   return (
@@ -66,16 +66,16 @@ export const CTA: React.FC<CTAProps> = ({ onCtaClick }) => {
             
             {/* Social Icons Footer */}
             <div className="flex justify-center items-center gap-6 mb-8">
-              <a href={whatsappUrl} className="w-10 h-10 hover:scale-110 transition-transform">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-10 h-10 hover:scale-110 transition-transform">
                 <img src={whatsappImg} alt="WhatsApp" className="w-full h-full object-contain" />
               </a>
-              <a href="#" className="w-10 h-10 hover:scale-110 transition-transform">
+              <a href="https://linkedin.com/in/%E2%80%8Brejane-maciel-799909b7?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="w-10 h-10 hover:scale-110 transition-transform">
                 <img src={linkedinImg} alt="LinkedIn" className="w-full h-full object-contain" />
               </a>
-              <a href="#" className="w-10 h-10 hover:scale-110 transition-transform">
+              <a href="https://www.instagram.com/rejanevmaciel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 hover:scale-110 transition-transform">
                 <img src={instagramImg} alt="Instagram" className="w-full h-full object-contain" />
               </a>
-              <a href="#" className="w-10 h-10 hover:scale-110 transition-transform">
+              <a href="https://www.facebook.com/rejanevmaciel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 hover:scale-110 transition-transform">
                 <img src={facebookImg} alt="Facebook" className="w-full h-full object-contain" />
               </a>
             </div>
