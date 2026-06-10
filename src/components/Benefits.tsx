@@ -4,10 +4,22 @@ import lightBg from 'figma:asset/8dd429ad8c4ffc27cd2db8d6ca4c288dcfdf727b.png';
 import bulletImg from 'figma:asset/27871757efc70c52bc9eb597ada086837bc69b41.png';
 
 const benefits = [
-  "Cultura, liderança e estratégia totalmente alinhadas",
-  "Redução de ruídos e conflitos internos",
-  "Líderes preparados para gerar performance com humanidade",
-  "Maior engajamento e senso de pertencimento no time"
+  {
+    title: "Cultura, liderança e estratégia totalmente alinhadas",
+    description: "Fortalecimento da conexão entre propósito, gestão e execução, criando equipes mais coerentes, produtivas e estratégicas."
+  },
+  {
+    title: "Redução de ruídos e conflitos internos",
+    description: "Melhoria da comunicação e dos relacionamentos, promovendo ambientes mais saudáveis, colaborativos e eficientes."
+  },
+  {
+    title: "Líderes preparados para gerar performance com humanidade",
+    description: "Desenvolvimento de lideranças capazes de alcançar resultados sem perder a escuta, a empatia e o cuidado com as pessoas."
+  },
+  {
+    title: "Maior engajamento e senso de pertencimento no time",
+    description: "Equipes mais conectadas com a cultura, os objetivos e os valores da organização, aumentando motivação e comprometimento."
+  }
 ];
 
 export const Benefits: React.FC = () => {
@@ -42,12 +54,17 @@ export const Benefits: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className="flex items-start gap-4 bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-[#A08073]/20 hover:border-[#D4AD6F] transition-colors shadow-sm hover:shadow-md"
             >
-              <div className="w-8 h-8 shrink-0">
+              <div className="w-8 h-8 shrink-0 mt-1">
                 <img src={bulletImg} alt="bullet" className="w-full h-full object-contain" />
               </div>
-              <p className="text-xl text-[#4B6066] font-medium leading-relaxed">
-                {benefit}
-              </p>
+              <div className="flex flex-col gap-1">
+                <h4 className="text-lg text-[#A08073] font-bold leading-snug">
+                  {benefit.title}
+                </h4>
+                <p className="text-sm text-[#4B6066] leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

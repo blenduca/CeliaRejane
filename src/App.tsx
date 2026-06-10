@@ -4,12 +4,14 @@ import { ProblemAwareness } from './components/ProblemAwareness';
 import { Solution } from './components/Solution';
 import { TargetAudience } from './components/TargetAudience';
 import { About } from './components/About';
+import { Portfolio } from './components/Portfolio';
 import { Books } from './components/Books';
 import { Methodology } from './components/Methodology';
 import { Benefits } from './components/Benefits';
 import { CTA } from './components/CTA';
 import { ThankYou } from './components/ThankYou';
 import { StrategySessionModal } from './components/StrategySessionModal';
+import { BackToTop } from './components/ui/BackToTop';
 
 export default function App() {
   const [showThankYou, setShowThankYou] = useState(false);
@@ -26,10 +28,12 @@ export default function App() {
       <Solution onCtaClick={() => setIsModalOpen(true)} />
       <TargetAudience />
       <About />
+      <Portfolio />
       <Books />
       <Methodology />
       <Benefits />
       <CTA onCtaClick={() => setIsModalOpen(true)} />
+      <BackToTop />
       <StrategySessionModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 

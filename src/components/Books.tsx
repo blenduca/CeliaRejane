@@ -10,12 +10,14 @@ export const Books: React.FC = () => {
       subtitle: "Crie um plano tático para aumentar seus resultados na vida e nos negócios",
       description: "Um guia prático para transformar visões em resultados tangíveis.",
       image: book1,
+      buyUrl: "https://www.amazon.com.br/s?k=Sonho+Sem+Estrat%C3%A9gia+N%C3%A3o+Vira+Realidade+Marcos+Freitas"
     },
     {
       title: "Líderes do Agora",
       subtitle: "Fortes na Estratégia, Profundos na Presença",
       description: "Uma nova abordagem para liderança que une competência técnica e inteligência emocional.",
       image: book2,
+      buyUrl: "https://www.amazon.com.br/s?k=L%C3%ADderes+do+Agora+Chai+Carioni"
     }
   ];
 
@@ -55,11 +57,19 @@ export const Books: React.FC = () => {
                 />
               </div>
 
-              <div className="mt-8 text-center relative z-10">
+              <div className="mt-8 text-center relative z-10 flex flex-col items-center">
                 <h4 className="text-xl font-bold text-[#4B6066] mb-1">{book.title}</h4>
                 {book.subtitle && (
-                  <p className="text-[#D4AD6F] font-medium text-sm mb-3 uppercase tracking-wider px-4">{book.subtitle}</p>
+                  <p className="text-[#D4AD6F] font-medium text-sm mb-4 uppercase tracking-wider px-4">{book.subtitle}</p>
                 )}
+                <a 
+                  href={book.buyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#D4AD6F] hover:bg-[#bfa06f] text-white font-bold py-2.5 px-6 rounded-lg text-sm transition-all duration-300 shadow-md shadow-[#D4AD6F]/10 hover:shadow-lg hover:-translate-y-0.5"
+                >
+                  Adquirir na Amazon
+                </a>
               </div>
             </motion.div>
           ))}

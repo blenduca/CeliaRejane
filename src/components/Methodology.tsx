@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import lightBg from 'figma:asset/8dd429ad8c4ffc27cd2db8d6ca4c288dcfdf727b.png';
+import { EagleIcon } from './ui/EagleIcon';
 
 const acronym = [
   { letter: 'P', word: 'Prosperidade', desc: 'Crescimento financeiro aliado ao bem-estar.' },
@@ -20,7 +21,16 @@ export const Methodology: React.FC = () => {
       ></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="mb-4 text-[#D4AD6F] hover:scale-105 transition-transform duration-300"
+          >
+            <EagleIcon size={56} className="drop-shadow-md" />
+          </motion.div>
+
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
